@@ -1,0 +1,50 @@
+{% extends "layouts/template_base.njk" %}
+
+{% block titulo %}Libros - Ficha{% endblock %}
+
+{% block estilos %}
+<link rel="stylesheet" href="/static/css/material-icons.css" />
+<link rel="stylesheet" href="/static/css/libros_ficha.css" />
+{% endblock %}
+
+{% block contenido %}
+<!-- Botones Flotantes -->
+<div class="volver" title="Listado"><i class="material-icons">replay</i></div>
+<div class="principal" title="Principal"><i class="material-icons">home</i></div>
+
+<header>
+  <div class="brand-logo">
+    <i class="material-icons md-18">account_balance</i>
+  </div>
+  <div class="brand-name">Mi Biblioteca</div>
+  <div class="account">
+    <i class="material-icons">account_box</i>
+    <div class="user">
+      <i class="material-icons">account_circle</i>
+      <div class="user-name"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <h1>Ficha de Libro</h1>
+  <form action="#">
+    <div class="titulo-container">
+      <label for="titulo">Título</label>
+      <input id="titulo" type="text" name="titulo" value="{{ libro.titulo }}" disabled />
+    </div>
+    <div class="editorial-container">
+      <label for="editorial">Editorial</label>
+      <input id="editorial" type="text" name="editorial" value="{{ libro.editorial }}" disabled />
+    </div>
+    <div class="precio-container">
+      <label for="precio">Precio</label>
+      <input id="precio" type="text" name="precio" value="{{ libro.precio }}" disabled />
+    </div>
+  </form>
+</main>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/libros_ficha.js"></script>
+{% endblock %}

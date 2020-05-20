@@ -1,0 +1,39 @@
+{% extends "layouts/template_base.njk" %}
+
+{% block titulo %}Mi Biblioteca - Principal{% endblock %}
+
+{% block estilos %}
+<link rel="stylesheet" href="/static/css/material-icons.css" />
+<link rel="stylesheet" href="/static/css/libros_principal.css" />
+{% endblock %}
+
+{% block contenido %}
+<header>
+  <div class="brand-logo">
+    <i class="material-icons md-18">account_balance</i>
+  </div>
+  <div class="brand-name">Mi Biblioteca</div>
+  <div class="account">
+    <i class="material-icons">account_box</i>
+    <div class="user">
+      <i class="material-icons">account_circle</i>
+      <div class="user-name"></div>
+    </div>
+  </div>
+
+  <input id="user" type="hidden" value="{{ user }}" />
+  <input id="token" type="hidden" value="{{ token }}" />
+</header>
+
+<main>
+  <h1>Operaciones</h1>
+  <nav>
+    <a id="listado" href="#">Listar Libros</a>
+    <a id="insercion" href="#">Añadir Libro</a>
+  </nav>
+</main>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/libros_principal.js"></script>
+{% endblock %}

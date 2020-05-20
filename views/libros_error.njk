@@ -1,0 +1,38 @@
+{% extends "layouts/template_base.njk" %}
+
+{% block titulo %}Mi Biblioteca - Error{% endblock %}
+
+{% block estilos %}
+<link rel="stylesheet" href="/static/css/material-icons.css" />
+<link rel="stylesheet" href="/static/css/libros_error.css" />
+{% endblock %}
+
+{% block contenido %}
+<!-- Botones Flotantes -->
+<div class="volver" title="Listado"><i class="material-icons">replay</i></div>
+<div class="principal" title="Principal"><i class="material-icons">home</i></div>
+
+<!-- Encabezado -->
+<header>
+  <div class="brand-logo">
+    <i class="material-icons md-18">account_balance</i>
+  </div>
+  <div class="brand-name">Mi Biblioteca</div>
+  <div class="account">
+    <i class="material-icons">account_box</i>
+    <div class="user">
+      <i class="material-icons">account_circle</i>
+      <div class="user-name"></div>
+    </div>
+  </div>
+</header>
+
+<!-- Principal -->
+<main>
+  <h1>{{ msg }}</h1>
+</main>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/libros_error.js"></script>
+{% endblock %}

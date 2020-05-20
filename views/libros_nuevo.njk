@@ -1,0 +1,54 @@
+{% extends "layouts/template_base.njk" %}
+
+{% block titulo %}Mi Biblioteca - Nuevo{% endblock %}
+
+{% block estilos %}
+<link rel="stylesheet" href="/static/css/material-icons.css" />
+<link rel="stylesheet" href="/static/css/libros_nuevo.css" />
+{% endblock %}
+
+{% block contenido %}
+<div class="volver" title="Listado"><i class="material-icons">replay</i></div>
+<div class="principal" title="Principal"><i class="material-icons">home</i></div>
+
+<header>
+  <div class="brand-logo">
+    <i class="material-icons md-18">account_balance</i>
+  </div>
+  <div class="brand-name">Mi Biblioteca</div>
+  <div class="account">
+    <i class="material-icons">account_box</i>
+    <div class="user">
+      <i class="material-icons">account_circle</i>
+      <div class="user-name"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <h1>Nuevo Libro</h1>
+
+  <form action="/web/libros/nuevo/proxy" method="POST">
+    <div class="titulo-container">
+      <label for="titulo">Título</label>
+      <input id="titulo" type="text" name="titulo" pattern="\w.*" required />
+    </div>
+    <div class="editorial-container">
+      <label for="editorial">Editorial</label>
+      <input id="editorial" type="text" name="editorial" pattern="\w.*" required />
+    </div>
+    <div class="precio-container">
+      <label for="precio">Precio</label>
+      <input id="precio" type="text" name="precio" pattern="\d+\.?\d*" required />
+    </div>
+    <div class="botones-container">
+      <button type="submit">Insertar</button>
+      <button type="reset">Reiniciar</button>
+    </div>
+  </form>
+</main>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/libros_nuevo.js"></script>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "layouts/template_base.njk" %}
+
+{% block titulo %}{% endblock %}
+
+{% block estilos %}{% endblock %}
+
+{% block contenido %}
+<form class="formulario">
+  <input name="titulo" type="text" value="{{ titulo }}" />
+  <input name="editorial" type="text" value="{{ editorial }}" />
+  <input name="precio" type="text" value="{{ precio }}" />
+</form>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/libros_nuevo_proxy.js"></script>
+{% endblock %}

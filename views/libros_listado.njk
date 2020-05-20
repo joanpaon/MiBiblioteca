@@ -1,0 +1,55 @@
+{% extends "layouts/template_base.njk" %}
+
+{% block titulo %}Mi Biblioteca - Listado{% endblock %}
+
+{% block estilos %}
+<link rel="stylesheet" href="/static/css/material-icons.css" />
+<link rel="stylesheet" href="/static/css/libros_listado.css" />
+{% endblock %}
+
+{% block contenido %}
+<div class="principal" title="Principal"><i class="material-icons">home</i></div>
+
+<header>
+  <div class="brand-logo">
+    <i class="material-icons md-18">account_balance</i>
+  </div>
+  <div class="brand-name">Mi Biblioteca</div>
+  <div class="account">
+    <i class="material-icons">account_box</i>
+    <div class="user">
+      <i class="material-icons">account_circle</i>
+      <div class="user-name"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <h1>Listado de Libros</h1>
+  <table>
+    <!-- Cabecera -->
+    <tr>
+      <th>Título</th>
+      <th>Acciones</th>
+    </tr>
+
+    <!-- Listado -->
+    {% for libro in libros %}
+    <tr>
+      <td>{{ libro.titulo }}</td>
+      <td>
+        <div>
+          <div class="consulta" data-id="{{ libro._id }}" title="Consultar Libro">C</div>
+          <div class="edicion" data-id="{{ libro._id }}" title="Modificar Libro">M</div>
+          <div class="borrado" data-id="{{ libro._id }}" title="Borrar Libro">B</div>
+        </div>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</main>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/libros_listado.js"></script>
+{% endblock %}

@@ -1,0 +1,381 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+/* --- */
+
+html {
+  font-size: 2vh;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* --- */
+
+#container {
+  height: 100vh;
+
+  /* margin-top: 4rem; */
+  /* padding: 1rem; */
+
+  background-color: blanchedalmond;
+  background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+/* --- */
+
+header {
+  height: 5rem;
+  width: 100%;
+
+  padding: 0 0.5rem;
+
+  background-color: rgba(0, 0, 0, 0.3);
+  border-bottom: solid 0.1rem white;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --- */
+
+.brand-logo {
+  padding: 0 1rem;
+  margin-right: 1rem;
+
+  color: tomato;
+  text-decoration: none;
+
+  background-color: bisque;
+  border-radius: 0.2rem;
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-logo:hover {
+  color: goldenrod;
+
+  background-color: brown;
+}
+
+.brand-logo i {
+  font-size: 3rem;
+  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.7);
+}
+
+/* --- */
+
+.brand-name {
+  color: bisque;
+  font-size: 3rem;
+  font-variant: small-caps;
+  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.7);
+}
+
+/* --- */
+
+.account > i {
+  margin-left: auto;
+
+  color: white;
+  font-size: 3rem;
+  text-decoration: none;
+  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.7);
+
+  cursor: pointer;
+
+  display: flex;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.account > i:hover {
+  color: gold;
+}
+
+/* --- */
+
+.account .user {
+  color: white;
+  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.7);
+
+  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.account .user > i {
+  color: tomato;
+}
+
+.account .user-name {
+  margin-top: 0.3rem;
+  padding: 0 0.3rem;
+
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+
+/* --- */
+
+main {
+  max-width: 50rem;
+  width: 100%;
+
+  margin-top: 5rem;
+  padding: 1rem;
+
+  overflow: auto;
+
+  /* background-color: aquamarine; */
+}
+
+/* --- */
+
+.principal {
+  height: 2.5rem;
+  width: 2.5rem;
+
+  color: aliceblue;
+  font-size: 1.5rem;
+  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+
+  background-color: lime;
+  background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+  border: solid 0.1rem white;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.2;
+
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.5s;
+}
+
+.principal:hover {
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}
+
+/* --- */
+
+h1 {
+  margin: 1rem;
+
+  color: tomato;
+  font-size: 3rem;
+  font-variant: small-caps;
+  font-weight: 100;
+  font-weight: 900;
+  text-align: center;
+  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.8);
+}
+
+/* --- */
+
+table {
+  width: 100%;
+
+  /* margin-bottom: auto; */
+
+  font-size: 1rem;
+
+  background-color: aliceblue;
+  background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+
+  border-collapse: separate;
+  border-spacing: 0.4rem;
+
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+th:first-child {
+  padding: 0.5rem;
+
+  color: white;
+  text-align: left;
+
+  background-color: brown;
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+th:last-child {
+  width: 9rem;
+
+  padding: 0.5rem;
+
+  color: white;
+  text-align: center;
+
+  background-color: brown;
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+/* --- */
+
+tr:nth-child(2n) {
+  height: 2.5rem;
+  background-color: antiquewhite;
+}
+
+tr:nth-child(2n + 1) {
+  height: 2.5rem;
+  background-color: burlywood;
+}
+
+tr:first-child {
+  height: auto;
+}
+
+/* --- */
+
+td:first-child {
+  padding: 0.5rem;
+
+  text-align: left;
+
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+td:last-child {
+  text-align: center;
+
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+td:last-child > div {
+  height: 100%;
+
+  /* background-color: chartreuse; */
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* --- */
+
+.consulta {
+  width: 2rem;
+
+  padding: 0.3rem;
+
+  color: white;
+  font-size: 1rem;
+  font-weight: 900;
+  text-decoration: none;
+  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.8);
+
+  background-color: deepskyblue;
+  background-color: tomato;
+  background-color: lime;
+  background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+  border: solid 0.05rem white;
+  border-radius: 0.2rem;
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.consulta:hover {
+  color: gold;
+  text-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+
+.consulta:active {
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0);
+}
+
+/* --- */
+
+.borrado {
+  width: 2rem;
+
+  padding: 0.3rem;
+
+  color: white;
+  font-size: 1rem;
+  font-weight: 900;
+  text-decoration: none;
+  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.8);
+
+  background-color: deepskyblue;
+  background-color: lime;
+  background-color: tomato;
+  background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+  border: solid 0.05rem white;
+  border-radius: 0.2rem;
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.borrado:hover {
+  color: gold;
+  text-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+
+.borrado:active {
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0);
+}
+
+/* --- */
+
+.edicion {
+  width: 2rem;
+
+  padding: 0.3rem;
+
+  color: white;
+  font-size: 1rem;
+  font-weight: 900;
+  text-decoration: none;
+  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.8);
+
+  background-color: lime;
+  background-color: tomato;
+  background-color: deepskyblue;
+  background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+  border: solid 0.05rem white;
+  border-radius: 0.2rem;
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.edicion:hover {
+  color: gold;
+  text-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+
+.edicion:active {
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0);
+}

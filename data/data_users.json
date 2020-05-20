@@ -1,0 +1,6 @@
+[
+  { "name": "nacho", "pass": "12345", "role": "admin" },
+  { "name": "pepe", "pass": "pepe111", "role": "normal" },
+  { "name": "p", "pass": "p", "role": "normal" },
+  { "name": "q", "pass": "q", "role": "admin" }
+]

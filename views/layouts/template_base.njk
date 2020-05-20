@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>{% block titulo %}{% endblock %}</title>
+  
+  <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon" />
+
+  {% block estilos %}{% endblock %}
+</head>
+
+<body>
+  <div id="container">
+    {% block contenido %}{% endblock %}
+  </div>
+
+  {% block scripts %}{% endblock %}
+</body>
+
+</html>
