@@ -24,7 +24,7 @@ nunjucks.configure("views", {
 // PUT + DELETE > Formularios HTML
 app.use(methodOverride("_method"));
 
-// Datos Petición (JSON|URLENcoded) > Body
+// Datos Petición (JSON|URLEncoded) > Body
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
